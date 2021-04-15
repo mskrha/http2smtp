@@ -1,0 +1,12 @@
+[Unit]
+Description=HTTP to SMTP proxy
+After=rc-local.service
+
+[Service]
+ExecStart=/usr/sbin/http2smtp
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

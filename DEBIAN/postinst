@@ -1,0 +1,11 @@
+#! /bin/bash
+
+chown -R root:root /usr/sbin/http2smtp /etc/systemd/system/http2smtp.service /etc/http2smtp
+chmod 755 /usr/sbin/http2smtp
+
+systemctl daemon-reload
+
+# check if this is 'install', not 'reinstall' or 'upgrade'
+if [ "x${2}" == 'x' ]; then
+	systemctl enable http2smtp.service
+fi
