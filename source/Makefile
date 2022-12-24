@@ -2,7 +2,7 @@ BUILD		= http2smtp
 VERSION		?= 0.0
 PKG		?= $(BUILD)_$(VERSION)_amd64
 OUTPUT		= $(BUILD)
-REGISTRY	= 'registry.docker.srv.sobotiste.info'
+REGISTRY	= 'registry.docker.srv.skrha.cz'
 
 all: clean format build
 
